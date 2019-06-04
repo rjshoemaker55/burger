@@ -1,0 +1,40 @@
+.jumbotron {
+    background: #69353F;
+    color: #D4F2DB;
+    border-radius: 0px !important;
+}
+
+body {
+    background: #CEF7A0;
+}
+
+#ready-div {
+    background: #914D76;
+    color: #D4F2DB;
+    height: 100%;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#eaten-div {
+    background: #BA9790;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+#cook-div {
+    background: #efefef;
+    padding-bottom: 15px;
+    width: 330px;
+}
+
+.devour-buttons {
+background: #69353F;
+margin-left: 30px;
+}
+
+.devour-buttons, .ready-text {
+    display: inline;
+}

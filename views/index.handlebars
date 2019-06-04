@@ -1,0 +1,57 @@
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-12'>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <div class='row'>
+                        <div class='col-sm-12'>
+                     <h1 class="display-4">RJ's Burger Stand</h1>
+                     <p class="lead">Cook yourself up some burgers, and then eat them!</p>
+                     </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class='container'>
+    <div class='row'>
+
+        <div class='col-sm-4' id='ready-div'>
+            <h3>Ready to be Eaten:</h3>
+            {{#each burgers}}{{#unless this.devoured}}
+
+            <form action='/{{this.id}}' method='POST'>
+                <p class='ready-text'>ID: {{id}} | Name: {{burger_name}}</p>
+            <button class='btn btn-primary devour-buttons'>EAT IT!</button>
+            </form>
+            {{/unless}}{{/each}}
+
+        </div>
+
+
+        <div class='col-sm-4' id='eaten-div'>
+            <h3>Already Eaten:</h3>
+            {{#each burgers}}{{#if this.devoured}}
+            <p>ID: {{id}} | Name: {{burger_name}}</p>
+            {{/if}}{{/each}}
+        </div>
+
+        <div class='col-sm-4' id='cook-div'>
+            <h3>Cook a burger!</h3>
+            <form action='/' method='POST'>
+                <input type='text' id='new-name-input' name='newburgername'>
+                <button type='submit'>Cook it!</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
